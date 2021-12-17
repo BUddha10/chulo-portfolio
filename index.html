@@ -24,21 +24,20 @@
     <title>Buddha Tamang | Web Developer</title>
   </head>
   <body>
-    <!-- navbar -->
-    <nav>
-      <ul class="navigation">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li>
-          <a href="#" class="nav-link"><h2>Me.</h2></a>
-        </li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact Me</a></li>
-      </ul>
-      <!-- <button class="burger-menu" id="burger-menu">
-        <i class="fas fa-bars"></i>
-      </button> -->
-    </nav>
+    	<!-- navbar -->
+		<nav>
+			<h1><a href="#">Me.</a></h1>
+			<ul class="navigation">
+				<li><a href="#about" class="nav-link">About</a></li>
+				<li><a href="#skills" class="nav-link">Skills</a></li>
+				<li><a href="#projects" class="nav-link">Projects</a></li>
+				<li><a href="#academic" class="nav-link">Academic</a></li>
+				<li><a href="#contact" class="nav-link">Contact Me</a></li>
+			</ul>
+			<!-- <button class="burger-menu" id="burger-menu">
+				<i class="fas fa-bars"></i>
+			</button> -->
+		</nav>
 
     <!-- home -->
     <section class="home">
@@ -87,7 +86,7 @@
     </section>
 
     <!-- about -->
-    <section class="about">
+    <section class="about" id="about">
       <h1>About me</h1>
       <div class="about-detail">
         <div>
@@ -129,6 +128,58 @@
           <p class="about-contact">Contact</p>
         </div>
       </div>
+    </section>
+
+    	<!-- what i do -->
+		<section class="what-i-do" id="skills">
+			<h1>What I Do</h1>
+			<div class="cards">
+				<div class="card">
+					<i class="card-icon1 fas fa-palette"></i>
+					<div class="card-topic">UI/UX design</div>
+					<div class="card-detail">
+						I’m a designer who codes. I care deeply about creating world-class,
+						useful, and beautiful products that help people and make a
+						difference. I can be as involved in your project as you need me to
+						be; from the seed of the idea, to sketches, creative direction,
+						design, copywriting and system design.
+					</div>
+					.
+				</div>
+				<div class="card">
+					<i class="card-icon2 fas fa-code"></i>
+					<div class="card-topic">Front End Web Development</div>
+					<div class="card-detail">
+						I am quite experienced in client-side development by using front end
+						technologies like HTML, CSS, JavaScript and React for a website or
+						Web Application so that a user can see and interact with them
+						directly.
+					</div>
+				</div>
+				<div class="card">
+					<i class="card-icon3 fas fa-server"></i>
+					<div class="card-topic">Back End Web Development</div>
+					<div class="card-detail">
+						I can be involved in server-side development with node.js and
+						express. I can work with mongoDB and can seamlessly integrate APIs
+						into the website or application.
+					</div>
+			</div>
+		</section>
+
+    <!-- contact form -->
+    <section class="contact-form" id="contact">
+      <h1>Contact Form</h1>
+      <div class="form-input">
+        <div class="form-inputName">
+          <input type="text" class="firstName" placeholder="First name">
+          <input type="text" placeholder="Last name">
+        </div>
+        <input type="text" placeholder="Email address">
+        <input type="text" placeholder="Subject of the message">
+      </div>
+      <textarea name="contace-message" class="input-message" placeholder="Type your message here...." cols="100" rows="10" minlength="10" maxlength="500" required></textarea>
+      <button class="form-submit">Send Message</button>
     </section>
   </body>
 </html>

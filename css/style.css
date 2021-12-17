@@ -4,15 +4,13 @@
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #100e10;
-  --primary-color: #fcfcfc;
-  --secondary-color: #009ccc;
-  --card-bg: #1e1e25;
-  --secondary-shadow: #a17a69;
+  --bg-color: whitesmoke;
+  --primary-color: #000;
+  --secondary-color: #009b34;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
-  --transition: 0.3s;
+  --transition: all ease-in-out 0.3s;
 }
 /* Variables end */
 
@@ -55,10 +53,10 @@ nav {
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 2rem;
 }
 
@@ -139,7 +137,8 @@ nav ul li {
   height: 30rem;
   border-radius: 50%;
   padding: 1rem;
-  border: 1rem solid black;
+  border: 1rem solid rgb(27, 73, 37);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .about {
@@ -177,13 +176,150 @@ nav ul li {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   border-radius: 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .about-contact:hover {
   background-color: #54acc7;
   color: #e9e4e4;
-  transform: scale(1.2);
-  transition: var(--transition);
+  transform: scale(1.09);
+  transition: all 0.3s ease-in-out;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(25, 131, 255, 0.81);
   box-shadow: 0px 0px 10px 1px rgba(25, 131, 255, 0.81);
+}
+
+/* what I do */
+
+.what-i-do {
+  padding: 5rem 1rem;
+}
+
+.what-i-do > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 22.5rem;
+  padding: 1rem 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: center;
+}
+.card:hover {
+  transform: scale(1.04);
+  transition: all 0.5s 0s ease-in-out;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-icon1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: purple;
+}
+
+.card-icon2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #eb1e39;
+}
+
+.card-icon3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3835d8;
+}
+
+/* contact form */
+.contact-form {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact-form > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-inputName > input {
+  width: 50%;
+  font-size: 1.2rem;
+  background: transparent;
+  color: gray;
+  margin-top: 2rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px gray;
+}
+
+.form-inputName > input:focus {
+  border-bottom: solid 2px green;
+}
+
+.firstName {
+  margin-right: 1rem;
+}
+
+.form-input > input {
+  font-size: 1.2rem;
+  background: transparent;
+  color: gray;
+  margin-top: 2rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: solid 1px gray;
+}
+
+.form-input > input:focus {
+  border-bottom: solid 2px green;
+}
+
+.input-message {
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: solid 1px gray;
+}
+
+.input-message:focus {
+  border-bottom: solid 2px green;
+}
+
+.form-submit {
+  margin-top: 2rem;
+  width: fit-content;
+  padding: 1rem 2rem;
+  background-color: green;
+  border: none;
+  border-radius: 5rem;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
