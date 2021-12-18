@@ -1,15 +1,9 @@
-/* Variables */
+/*  Variables */
 :root {
   --font-family: "Roboto", sans-serf;
-  --normal-font: 400;
-  --bold-font: 700;
-  --bolder-font: 900;
-  --bg-color: whitesmoke;
+  --bg-color: white;
   --primary-color: #000;
   --secondary-color: #009b34;
-  --bottom-margin: 0.5rem;
-  --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
   --transition: all ease-in-out 0.3s;
 }
 /* Variables end */
@@ -45,7 +39,8 @@ body {
   background-color: var(--bg-color);
   color: var(--primary-color);
 }
-
+/* ============================================================== */
+/* Start Navigation */
 nav {
   position: sticky;
   top: 0;
@@ -57,7 +52,7 @@ nav {
   padding: 1.5rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 nav a {
@@ -78,9 +73,9 @@ nav ul {
 nav ul li {
   font-weight: var(--bold-font);
 }
-
-/* home section */
-
+/* End Navigation */
+/* ============================================================== */
+/* Start Home */
 .home {
   height: 80vh;
   width: 100%;
@@ -139,8 +134,8 @@ nav ul li {
   height: 30rem;
   border-radius: 50%;
   padding: 1rem;
-  border: 1rem solid rgb(27, 73, 37);
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border: 1rem solid var(--secondary-color);
+  box-shadow: rgb(41, 98, 160) 0px 25px 35px -10px;
 }
 
 .about {
@@ -149,13 +144,15 @@ nav ul li {
 }
 
 .about > h1 {
-  padding-left: 1rem;
   font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .about-image {
   width: 20vw;
   margin: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .about-detail {
@@ -172,27 +169,29 @@ nav ul li {
 .about-contact {
   width: fit-content;
   margin-top: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.8rem;
   font-size: 1.2rem;
   font-weight: bold;
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: white;
   border-radius: 5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+}
+
+.about-contact:hover {
+  background-color: #5ca162;
+  color: #ffffff;
+  transform: scale(1.09);
+  transition: all 0.3s ease-in-out;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.about-contact:hover {
-  background-color: #54acc7;
-  color: #e9e4e4;
-  transform: scale(1.09);
-  transition: all 0.3s ease-in-out;
-  -webkit-box-shadow: 0px 0px 10px 1px rgba(25, 131, 255, 0.81);
-  box-shadow: 0px 0px 10px 1px rgba(25, 131, 255, 0.81);
-}
-
-/* what I do */
-
+/* End Home */
+/* ============================================================== */
+/* Start Skill */
 .what-i-do {
   padding: 5rem 1rem;
 }
@@ -212,11 +211,12 @@ nav ul li {
   width: 22.5rem;
   padding: 1rem 2rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   text-align: center;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.04);
@@ -242,8 +242,77 @@ nav ul li {
   font-weight: bold;
   color: #3835d8;
 }
+/* End Skill */
+/* ============================================================== */
+/* Start Projects */
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 1rem;
+}
+.project > h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
 
-/* academic */
+.wrapper {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.projects-card {
+  width: 30%;
+  height: 40vh;
+  margin: 20px 10px;
+  border: 1px solid rgb(243, 242, 242);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+.project-browser {
+  height: 20px;
+  padding-right: 5px;
+  background-color: rgb(221, 220, 220);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: sticky;
+  z-index: 2;
+}
+.browser-circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin: 3px;
+  background-color: white;
+}
+
+.green {
+  background-color: green;
+}
+.yellow {
+  background-color: yellow;
+}
+.red {
+  background-color: red;
+}
+
+.browser-img {
+  width: 100%;
+  transition: all 8s ease-in-out;
+}
+
+.project-card:hover,
+.browser-img:hover {
+  transform: translateY(-100%);
+}
+
+/* End Project */
+/* ============================================================== */
+/* Start Academic */
 .academic {
   padding: 5rem;
 }
@@ -291,7 +360,9 @@ nav ul li {
   height: 64px;
 }
 
-/* contact form */
+/* End Academic */
+/* ============================================================== */
+/* Start Contact form */
 .contact-form {
   padding: 5rem;
   display: flex;
@@ -373,69 +444,54 @@ nav ul li {
   font-size: 1.5rem;
   cursor: pointer;
 }
+/* End Contact Form */
+/* ============================================================== */
+/* Start Footer */
+footer {
+  background-color: whitesmoke;
+}
 
-/* projects */
-.project {
+.f-wrapper {
+  padding: 5rem;
   display: flex;
   flex-direction: column;
-  padding: 5rem 1rem;
-}
-.project > h1 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
+  justify-content: space-between;
 }
 
-.wrapper {
-  padding: 1rem 2rem;
+.f-wrapper p {
+  color: gray;
+  margin-left: 2rem;
+  padding: 0.5rem;
+}
+
+.footer-top {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
-.projects-card {
-  width: 30%;
-  height: 40vh;
-  margin: 20px 10px;
-  border: 1px solid rgb(243, 242, 242);
-  border-radius: 10px 10px 0 0;
-  overflow: hidden;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  cursor: pointer;
+
+.footer-top h2 {
+  font-weight: bold;
 }
-.project-browser {
-  height: 20px;
-  padding-right: 5px;
-  background-color: rgb(221, 220, 220);
+
+.footer-button {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  position: sticky;
-  z-index: 2;
-}
-.browser-circle {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  margin: 3px;
-  background-color: white;
+  justify-content: center;
 }
 
-.green {
-  background-color: green;
-}
-.yellow {
-  background-color: yellow;
-}
-.red {
-  background-color: red;
-}
-
-.browser-img {
-  width: 100%;
-  transition: all 8s ease-in-out;
+.footer-logo {
+  margin-top: 1.5rem;
+  width: fit-content;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  font-size: 1.5rem;
 }
 
-.project-card:hover,
-.browser-img:hover {
-  transform: translateY(-100%);
+.fc-by {
+  color: var(--secondary-color);
 }
+
+/* End Footer */
+/* ============================================================== */
