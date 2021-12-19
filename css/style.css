@@ -649,6 +649,11 @@ footer {
   }
 }
 @media only screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   nav {
     width: 100%;
     margin: 0;
@@ -730,8 +735,8 @@ footer {
     align-items: center;
   }
   .projects-card {
-    width: 25rem;
-    height: 30rem;
+    width: 18rem;
+    height: 22rem;
   }
 
   /* academic section */
