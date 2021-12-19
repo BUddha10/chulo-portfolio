@@ -745,6 +745,7 @@ footer {
   }
   .degree {
     gap: 3rem;
+    padding: 0 1rem;
   }
 
   .academic-degree {
