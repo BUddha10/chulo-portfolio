@@ -15,7 +15,7 @@
       type="image/x-icon"
     />
 
-    <!-- icon script -->
+    <!-- icon -->
     <link rel="stylesheet" href="./assets/css/all.min.css">
 
     <title>Buddha Tamang | Web Developer</title>
@@ -24,16 +24,22 @@
     <!-- Start Navbar Section -->
 		<nav>
 			<h1><a href="#">Me.</a></h1>
+      <button class="burger-menu" id="burger-menu">
+				<i class="fas fa-bars"></i>
+			</button>
+     
+      
 			<ul class="navigation">
 				<li><a href="#about" class="nav-link">About</a></li>
 				<li><a href="#skills" class="nav-link">Skills</a></li>
 				<li><a href="#projects" class="nav-link">Projects</a></li>
 				<li><a href="#academic" class="nav-link">Academic</a></li>
 				<li><a href="#contact" class="nav-link">Contact Me</a></li>
-			</ul>
-			<!-- <button class="burger-menu" id="burger-menu">
-				<i class="fas fa-bars"></i>
-			</button> -->
+        <button class="close-menu" id="close-menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </ul>
+			
 		</nav>
     <!-- End of Navbar Section -->
 
@@ -326,5 +332,9 @@
       </div>
     </footer>
     <!-- End of Footer Section -->
+
+
+    <!-- script -->
+    <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>
